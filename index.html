@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare - Health & Wellness</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-color: #0d6efd;
+            --secondary-color: #6c757d;
+            --dark-color: #212529;
+            --light-color: #f8f9fa;
+            --success-color: #198754;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .navbar-brand img {
+            height: 40px;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+        }
+
+        .service-card {
+            transition: transform 0.3s;
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .doctor-card img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 5px solid var(--primary-color);
+        }
+
+        .testimonial-card {
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .footer {
+            background-color: var(--dark-color);
+            color: white;
+        }
+
+        .social-icon {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: all 0.3s;
+        }
+
+        .social-icon:hover {
+            color: var(--primary-color);
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://cdn-icons-png.flaticon.com/512/2966/2966321.png" alt="MediCare Logo">
+                <span class="fw-bold">MediCare</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#doctors">Doctors</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#appointment">Appointment</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Your Health, Our Priority</h1>
+            <p class="lead">Quality healthcare for you and your family.</p>
+            <a href="#appointment" class="btn btn-light btn-lg mt-3">Book an Appointment</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Services</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card service-card h-100">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                            class="card-img-top" alt="General Medicine">
+                        <div class="card-body">
+                            <h5 class="card-title">General Medicine</h5>
+                            <p class="card-text">Comprehensive healthcare for adults and children.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card service-card h-100">
+                        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                            class="card-img-top" alt="Cardiology">
+                        <div class="card-body">
+                            <h5 class="card-title">Cardiology</h5>
+                            <p class="card-text">Specialized heart care and diagnostics.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card service-card h-100">
+                        <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                            class="card-img-top" alt="Pediatrics">
+                        <div class="card-body">
+                            <h5 class="card-title">Pediatrics</h5>
+                            <p class="card-text">Expert care for infants, children, and adolescents.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section id="doctors" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Doctors</h2>
+            <div class="row g-4 text-center">
+                <div class="col-md-4">
+                    <div class="doctor-card">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Dr. John Smith">
+                        <h4 class="mt-3">Dr. John Smith</h4>
+                        <p class="text-primary">Cardiologist</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="doctor-card">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Dr. Sarah Johnson">
+                        <h4 class="mt-3">Dr. Sarah Johnson</h4>
+                        <p class="text-primary">Pediatrician</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="doctor-card">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Dr. Michael Brown">
+                        <h4 class="mt-3">Dr. Michael Brown</h4>
+                        <p class="text-primary">General Surgeon</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Section -->
+    <section id="appointment" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Book an Appointment</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <form class="p-4 bg-white rounded shadow">
+                        <div class="row mb-3">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" placeholder="you@example.com" required>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Phone</label>
+                                <input type="tel" class="form-control" placeholder="+1234567890" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Department</label>
+                                <select class="form-select">
+                                    <option>General Medicine</option>
+                                    <option>Cardiology</option>
+                                    <option>Pediatrics</option>
+                                    <option>Neurology</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Date</label>
+                                <input type="date" class="form-control" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Time</label>
+                                <input type="time" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Message (Optional)</label>
+                            <textarea class="form-control" rows="3" placeholder="Describe your symptoms..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Book Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Patient Testimonials</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial-card p-4 bg-light">
+                        <p>"The doctors here are very professional and caring. Highly recommended!"</p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="Patient" width="50"
+                                class="rounded-circle me-3">
+                            <div>
+                                <h6 class="mb-0">Lisa Johnson</h6>
+                                <small class="text-muted">Cardiology Patient</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card p-4 bg-light">
+                        <p>"Excellent service and friendly staff. They made my child feel comfortable."</p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Patient" width="50"
+                                class="rounded-circle me-3">
+                            <div>
+                                <h6 class="mb-0">Robert Davis</h6>
+                                <small class="text-muted">Parent</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card p-4 bg-light">
+                        <p>"Quick diagnosis and effective treatment. Very satisfied with the care."</p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Patient" width="50"
+                                class="rounded-circle me-3">
+                            <div>
+                                <h6 class="mb-0">Emily Wilson</h6>
+                                <small class="text-muted">General Medicine</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Location -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Contact Us</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="p-4 bg-white rounded shadow">
+                        <h4 class="mb-4">Get in Touch</h4>
+                        <p><i class="fas fa-map-marker-alt me-2 text-primary"></i> 123 Medical St, Health City, HC 12345
+                        </p>
+                        <p><i class="fas fa-phone me-2 text-primary"></i> +1 (123) 456-7890</p>
+                        <p><i class="fas fa-envelope me-2 text-primary"></i> info@medicare.com</p>
+                        <div class="mt-4">
+                            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="ratio ratio-16x9">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215373510127!2d-73.9878449242202!3d40.74844097138987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1689876543210!5m2!1sen!2sus"
+                            allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container text-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/2966/2966321.png" alt="MediCare Logo" width="50"
+                class="mb-3">
+            <p class="mb-2">MediCare - Quality Healthcare Services</p>
+            <p class="mb-0">&copy; 2025 MediCare. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
